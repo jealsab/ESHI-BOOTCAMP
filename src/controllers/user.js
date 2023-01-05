@@ -140,6 +140,50 @@ exports.delete = async (req, res, next) => {
   }
 };
 
+// function to get all users
+exports.getAllUsers = async(req, res)=> {
+  try {
+      // to find the user from mongo
+      const users = await User.find()
+      return res.json({
+          users: users
+  })
+      
+  } catch (error) {
+      console.log("err")
+  }
+  
+
+}
+
+
+// function for user get by id
+exports.getUserById = async(req, res) => {
+  try {
+      const { id } = req.params; //destruction when { } is on the left side
+      const user = await User.findById(id)
+      if( !user ){
+          return res.json({
+              message: "user not found"
+          })
+      }
+      return res.json({
+          user: user
+      })
+      
+  } catch (error) {
+
+
+      res.json({
+          error: "error"
+      })
+      
+  }
+  
+}
+
+
+
 
 // /
 //  *

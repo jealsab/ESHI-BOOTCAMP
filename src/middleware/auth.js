@@ -32,5 +32,6 @@ exports.verifyUser = async (req, res, next) => {
     req.user = user;
     next();
   } catch (err) {
+    //TODO: Handle Invalid Token, Expried Token
   }
 };

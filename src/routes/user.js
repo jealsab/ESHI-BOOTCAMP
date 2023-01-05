@@ -1,8 +1,18 @@
 const express=require("express")
 const router=express.Router()
 const userController = require("../controllers/user");
+const {getAllUsers, getUserById} = require("../controllers/user")
+
 const userValidation = require("../middleware/validation/user");
 
+
+
+router.get(getAllUsers)
+
+
+router.route("/:id")
+
+.get(getUserById)
 
 // router.get
 router.post(
@@ -26,6 +36,7 @@ router.post(
     
     userController.update
   )
+  
   .delete(
     (userController.delete)
   

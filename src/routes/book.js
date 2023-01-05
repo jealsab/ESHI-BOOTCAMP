@@ -5,6 +5,7 @@ const { verifyUser } = require("../middleware/auth");
 
 const router = express.Router();
 
+
 router
   .route("/")
   .get(verifyUser, bookController.getAllBooks)
@@ -14,7 +15,6 @@ router
     bookValidation.validate("CREATE"),
     bookController.createBook
   );
-
 
 router
   .route("/:id")
