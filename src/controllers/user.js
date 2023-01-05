@@ -1,7 +1,7 @@
 const User = require("../models/user");
 // const jwt = require("jsonwebtoken");
 const { validationResult } = require("express-validator");
-
+// usercontroller
 // /
 //  *
 //  * @param {ObjectId} id

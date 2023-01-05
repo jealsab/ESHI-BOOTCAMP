@@ -5,7 +5,7 @@ const {getAllUsers, getUserById} = require("../controllers/user")
 
 const userValidation = require("../middleware/validation/user");
 
-
+// user router
 
 router.get(getAllUsers)
 

@@ -5,7 +5,7 @@ const { verifyUser } = require("../middleware/auth");
 
 const router = express.Router();
 
-
+// book router
 router
   .route("/")
   .get(verifyUser, bookController.getAllBooks)

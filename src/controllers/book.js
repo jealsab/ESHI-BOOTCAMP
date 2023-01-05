@@ -2,7 +2,7 @@ const Book = require("../models/book");
 const { validationResult } = require("express-validator");
 const multer = require("multer");
 const path = require("path");
-
+// book controller
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, path.join(__dirname, "../../public/img"));

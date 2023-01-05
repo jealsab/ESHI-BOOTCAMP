@@ -1,5 +1,6 @@
 const { body,param } = require("express-validator");
 const path = require("path");
+// userValidator
 // @param {String} type
 /**
  *
